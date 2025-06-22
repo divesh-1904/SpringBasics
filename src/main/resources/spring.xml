@@ -5,9 +5,15 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="dev" class="org.nevermind.Dev">
+<!--                <property name="age" value="18"/>-->
+                <constructor-arg index="0" value="20"/>
+                <constructor-arg name="laptop" ref="lap1" />
     </bean>
 
     <bean id="dev2" class="org.nevermind.Dev">
+    </bean>
+
+    <bean id="lap1" class="org.nevermind.Laptop">
     </bean>
 
 </beans>
